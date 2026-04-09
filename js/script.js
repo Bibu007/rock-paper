@@ -1,10 +1,12 @@
 let human = 0;
 let computer = 0;
+let error = 0;
 
 
 function getComputerChoice(){
     let arr = ["rock", "paper", "scissors"];
     let guess = (Math.floor(Math.random()*10))%3;
+    //console.log("computerChoice" + arr[guess]);
     return arr[guess];
 }
 
@@ -18,6 +20,9 @@ function getHumanChoice(){
 function playRound(){
     let humanChoice = getHumanChoice();
     let computerChoice = getComputerChoice();
+
+    console.log("computerChoice: " + computerChoice);
+    console.log("humanChoice: " + humanChoice);
 
     if (humanChoice == "rock" && computerChoice == "paper"){
         alert("You lose! paper beats rock");
@@ -49,16 +54,25 @@ function playRound(){
         human++;
     }
 
+    else if (humanChoice == computerChoice){
+        alert("Draw");
+    }
+
     else{
         alert("Try again :(");
+        console.log(humanChoice + " " + computerChoice)
+        error++;
     }
 }
 
 function playGame(){
-    for(let i=0; i<5; i++){
+    for(let i=0; i< 5; i++){
         playRound();
     }
 
-    if(humanChoice>computerChoice){alert("You won the game!");}
-    else if(computerChoice>humanChoice){alert("You lost the game....better luck next time");}
+    if(human>computer){alert("You won the game!");}
+    else if(computer>human){alert("You lost the game....better luck next time");}
+    else if (computer==human){alert("It's a tie");}
 }
+
+playGame();
