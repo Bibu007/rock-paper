@@ -1,1 +1,5 @@
-h
+function getComputerChoice(){
+    let arr = ["rock", "paper", "scissors"];
+    let guess = (Math.floor(Math.random()*10))%3;
+    return arr[guess];
+}
