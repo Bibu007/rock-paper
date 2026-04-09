@@ -1,3 +1,7 @@
+let human = 0;
+let computer = 0;
+
+
 function getComputerChoice(){
     let arr = ["rock", "paper", "scissors"];
     let guess = (Math.floor(Math.random()*10))%3;
@@ -14,8 +18,6 @@ function getHumanChoice(){
 function playRound(){
     let humanChoice = getHumanChoice();
     let computerChoice = getComputerChoice();
-    let human = 0;
-    let computer = 0;
 
     if (humanChoice == "rock" && computerChoice == "paper"){
         alert("You lose! paper beats rock");
@@ -50,4 +52,13 @@ function playRound(){
     else{
         alert("Try again :(");
     }
+}
+
+function playGame(){
+    for(let i=0; i<5; i++){
+        playRound();
+    }
+
+    if(humanChoice>computerChoice){alert("You won the game!");}
+    else if(computerChoice>humanChoice){alert("You lost the game....better luck next time");}
 }
