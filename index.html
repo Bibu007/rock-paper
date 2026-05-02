@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            padding: 5px 40px;
+            font-weight: 500;
+        }
+        .one{
+            padding: 50px;
+        }
+        .two{
+            padding: 50px;   
+        }
+        .three{
+            flex: auto;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class = "one"><h1>Rock Paper Scissors</h1></div>
+    <div class = "two">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
+    <div class = "three"></div>
 </body>
 </html>
