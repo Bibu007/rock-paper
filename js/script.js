@@ -63,29 +63,7 @@ function playGame(input){
 }
 
 function playRound(input){
-/*
-    if(counter == 5){
-        gcounter++;
-        if(human>computer){
-            const para = document.createElement("p");
-            para.textContent = `Game ${gcounter}: You won the game!`;
-            thirdContainer.appendChild(para);
-            //alert("You won the game!");
-        }
-        else if(computer>human){
-            const para = document.createElement("p");
-            para.textContent = `Game ${gcounter}: You lost the game....better luck next time`;
-            thirdContainer.appendChild(para);
-            //alert("You lost the game....better luck next time");
-    }
-        else if (computer==human){
-            const para = document.createElement("p");
-            para.textContent = `Game ${gcounter}: It's a tie`;
-            thirdContainer.appendChild(para);
-            //alert("It's a tie");
-    }
-    }
-*/
+
     let humanChoice = input;
     let computerChoice = getComputerChoice();
 
@@ -153,25 +131,5 @@ function playRound(input){
         thirdContainer.appendChild(para);
         //alert("Draw");
     }
-/*
-    else{
-        alert("Try again :(");
-        console.log(humanChoice + " " + computerChoice)
-        error++;
-    }
-*/
 }
 
-function playGame(){
-    for(let i=0; i< 5; i++){
-        playRound();
-    }
-
-    if(human>computer){alert("You won the game!");}
-    else if(computer>human){alert("You lost the game....better luck next time");}
-    else if (computer==human){alert("It's a tie");}
-}
-
-//function 
-
-//playGame();
